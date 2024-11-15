@@ -17,11 +17,18 @@ public class SoldiersMain {
         soldiers.add(new Soldier(5,"Kurt"));
 
         soldiers.forEach(s -> System.out.println(s));
+        //for (Soldier soldier : soldiers) {
+        //    System.out.println(soldier);
+        //}
 
         System.out.println("High Ranked:");
         Predicate<Soldier> isHighRanked = soldier -> soldier.getRank() > 3;
         Stream<Soldier> highSoldiers = soldiers.stream().filter(isHighRanked);
         highSoldiers.forEach(s -> System.out.println(s));
+        //soldiers.stream()
+        //        .filter(s -> s.getRank() > 3)
+        //        .forEach(s -> System.out.println(s));
+
 
         System.out.println("High and StartsWithJ");
         Predicate<Soldier> startsWithJ = s -> s.getName().startsWith("J");

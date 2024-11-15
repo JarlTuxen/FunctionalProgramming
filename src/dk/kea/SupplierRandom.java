@@ -12,7 +12,7 @@ public class SupplierRandom {
 
         Stream<Double> randomNumbers = Stream.generate(ran);
 
-        //randomNumbers.forEach(System.out::println);
+        //randomNumbers.limit(10).forEach(System.out::println);
 
         Function<Double, Long> dblRound = d -> Math.round(d*100); //tal 0 - 99
         Predicate<Long> longEqual = rannum -> rannum % 2 == 0;

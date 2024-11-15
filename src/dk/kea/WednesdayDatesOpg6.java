@@ -19,7 +19,7 @@ public class WednesdayDatesOpg6 {
     }
 
     public static void main(String[] args) {
-        int year = 2023;
+        int year = 2024;
 
         Predicate<LocalDate> isWednesday = date -> date.getDayOfWeek() == DayOfWeek.WEDNESDAY;
 
